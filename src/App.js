@@ -5,7 +5,7 @@ import { HashRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config' //renderRoutes 读取路由配置转化为 Route 标签
 import { routes } from './routes/index.js'
 import { Provider } from 'react-redux'
-import { store } from './store/index'
+import store from './store/index'
 
 function App() {
   return (

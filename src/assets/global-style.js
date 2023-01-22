@@ -37,4 +37,4 @@ const style = {
   noWrap,
 }
 
-export { style }
+export default style
