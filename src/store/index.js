@@ -2,7 +2,7 @@ import { createStore, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import reducer from './reducer'
 
-// ? 这是什么
+// 调试工具
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 // 创建一个包含应用程序 state 的 Redux store。

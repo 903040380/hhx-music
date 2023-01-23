@@ -5,6 +5,7 @@ import { fromJS } from 'immutable' // 这里用到 fromJS 把 JS 数据结构转
 const defaultState = fromJS({
   bannerList: [],
   recommendList: [],
+  enterLoading: true,
 })
 
 /**
@@ -17,12 +18,15 @@ const defaultState = fromJS({
  * 你可以在 reducer 中使用任何条件逻辑。 在这个例子中，我们使用了 switch 语句，但这不是必需的。
  *
  */
+// set是immutable改变属性
 export default (state = defaultState, action) => {
   switch (action.type) {
     case actionTypes.CHANGE_BANNER:
       return state.set('bannerList', action.data)
     case actionTypes.CHANGE_RECOMMEND_LIST:
       return state.set('recommendList', action.data)
+    case actionTypes.CHANGE_ENTER_LOADING:
+      return state.set('enterLoading', action.data)
     default:
       return state
   }
