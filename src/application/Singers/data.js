@@ -1,3 +1,5 @@
+// 使用hooks实现redux
+
 import React, { createContext, useReducer } from 'react'
 import { fromJS } from 'immutable'
 
@@ -30,5 +32,9 @@ export const Data = (props) => {
       alpha: '',
     })
   )
-  return <CategoryDataContext.Provider value={{ data, dispatch }}>{props.children}</CategoryDataContext.Provider>
+  return (
+    <CategoryDataContext.Provider value={{ data, dispatch }}>
+      {props.children}
+    </CategoryDataContext.Provider>
+  )
 }
